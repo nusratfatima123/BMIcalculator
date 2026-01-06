@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#d3d3c3"
+    android:padding="16dp">
+
+    <!-- Header -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="67dp"
+        android:background="#b0b098"
+        android:gravity="center"
+        android:text="Health API Data"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:drawableLeft="@android:drawable/ic_menu_share"
+        android:drawablePadding="8dp" />
+
+    <!-- API Data Card -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="4dp"
+        app:cardBackgroundColor="#FFFFFF">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="📊 Live Health Data"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#333333"
+                android:gravity="center"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:id="@+id/tvApiData"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Loading API data..."
+                android:textSize="16sp"
+                android:textColor="#666666"
+                android:lineSpacingExtra="6dp"
+                android:padding="8dp" />
+
+            <Button
+                android:id="@+id/btnFetchApi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/button_rounded_primary"
+                android:text="🔄 Refresh API Data"
+                android:textSize="16sp"
+                android:textColor="#FFFFFF"
+                android:drawableStart="@android:drawable/ic_popup_sync"
+                android:drawablePadding="8dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Note: This is mock data simulating real API response"
+                android:textSize="12sp"
+                android:textColor="#999999"
+                android:layout_marginTop="16dp"
+                android:padding="8dp"
+                android:background="#F5F5F5" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Bottom Navigation -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:background="@android:color/white"
+        android:elevation="8dp">
+
+        <Button
+            android:id="@+id/homeButton"
+            android:layout_width="0dp"
+            android:layout_height="64dp"
+            android:layout_weight="1"
+            android:background="?android:attr/selectableItemBackground"
+            android:text="🏠 Home"
+            android:textSize="14sp"
+            android:textColor="#333333"
+            android:drawableTop="@android:drawable/ic_menu_manage"
+            android:drawableTint="#4CAF50" />
+
+        <Button
+            android:id="@+id/foodButton"
+            android:layout_width="0dp"
+            android:layout_height="64dp"
+            android:layout_weight="1"
+            android:background="?android:attr/selectableItemBackground"
+            android:text="🍎 Food"
+            android:textSize="14sp"
+            android:textColor="#333333"
+            android:drawableTop="@android:drawable/ic_menu_camera"
+            android:drawableTint="#FF9800" />
+
+        <Button
+            android:id="@+id/exerciseButton"
+            android:layout_width="0dp"
+            android:layout_height="64dp"
+            android:layout_weight="1"
+            android:background="?android:attr/selectableItemBackground"
+            android:text="💪 Exercise"
+            android:textSize="14sp"
+ android:textColor="#333333"
+            android:drawableTop="@android:drawable/ic_menu_compass"
+            android:drawableTint="#2196F3" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#d3d3c3">
+
+    <!-- Header -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="67dp"
+        android:background="#b0b098"
+        android:gravity="center"
+        android:text="BMI History"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:drawableLeft="@android:drawable/ic_menu_recent_history"
+        android:drawablePadding="8dp" />
+
+    <!-- Clear History Button -->
+    <Button
+        android:id="@+id/btnClearHistory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:background="@drawable/button_rounded_small"
+        android:text="🗑️ Clear All History"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp" />
+
+    <!-- History List -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Empty State -->
+    <TextView
+        android:id="@+id/tvEmpty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="No BMI records found.\nCalculate your BMI first!"
+        android:textSize="18sp"
+        android:textColor="#666666"
+        android:padding="40dp"
+        android:visibility="gone" />
+
+    <!-- Bottom Navigation -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:background="@android:color/white"
+        android:elevation="8dp">
+
+        <Button
+            android:id="@+id/homeButton"
+            android:layout_width="0dp"
+            android:layout_height="64dp"
+            android:layout_weight="1"
+            android:background="?android:attr/selectableItemBackground"
+            android:text="🏠 Home"
+            android:textSize="14sp"
+            android:textColor="#333333"
+            android:drawableTop="@android:drawable/ic_menu_manage"
+            android:drawableTint="#4CAF50" />
+
+        <Button
+            android:id="@+id/foodButton"
+            android:layout_width="0dp"
+            android:layout_height="64dp"
+            android:layout_weight="1"
+            android:background="?android:attr/selectableItemBackground"
+            android:text="🍎 Food"
+            android:textSize="14sp"
+            android:textColor="#333333"
+            android:drawableTop="@android:drawable/ic_menu_camera"
+            android:drawableTint="#FF9800" />
+
+        <Button
+            android:id="@+id/exerciseButton"
+            android:layout_width="0dp"
+            android:layout_height="64dp"
+            android:layout_weight="1"
+            android:background="?android:attr/selectableItemBackground"
+            android:text="💪 Exercise"
+            android:textSize="14sp"
+            android:textColor="#333333"
+            android:drawableTop="@android:drawable/ic_menu_compass"
+            android:drawableTint="#2196F3" />
+    </LinearLayout>
+</LinearLayout>
