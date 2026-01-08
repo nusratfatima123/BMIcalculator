@@ -29,7 +29,7 @@ public class ExerciseActivity extends AppCompatActivity {
         float bmi = getIntent().getFloatExtra("BMI_VALUE", 0.0f);
 
         // Display BMI result
-        bmiResultText.setText("আপনার BMI: " + String.format("%.2f", bmi));
+        bmiResultText.setText("Your BMI: " + String.format("%.2f", bmi));
 
         // Display Exercise Suggestions
         exerciseSuggestionText.setText(getExerciseSuggestion(bmi));
